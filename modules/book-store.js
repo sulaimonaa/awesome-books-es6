@@ -1,5 +1,3 @@
-// import { getBooksFromStorage, saveBooksToStorage } from './storage.js';
-
 export default class Bookstore {
   constructor() {
     this.BooksContainer = document.querySelector('.booksDisplay');
@@ -24,7 +22,7 @@ export default class Bookstore {
   // remove book
   removeBook(index) {
     this.bookLibrary = this.bookLibrary.filter(
-      (book, bookIndex) => bookIndex !== index
+      (book, bookIndex) => bookIndex !== index,
     );
     localStorage.setItem('books', JSON.stringify(this.bookLibrary));
 

@@ -1,7 +1,6 @@
 const bookDisplay = document.querySelector('.bookContainer');
 const formDisplay = document.querySelector('.formContainer');
 const contactDisplay = document.querySelector('.contactContainer');
-const form = document.querySelector('form');
 // toggle display between the list, add book and contact
 
 export function displayList() {
