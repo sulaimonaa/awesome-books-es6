@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Awesome Books</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navSection">
+        <p class="logo">Awesome Books</p>
+        <ul class="navItemsavTextser navItemContainer">
+          <li class="navItems">
+            <a class="navTexts" href="#bookContainer" id="showList">List</a>
+          </li>
+          <li class="navItems">
+            <a class="navTexts" href="#formContainer" id="addNewBook"
+              >Add new
+            </a>
+          </li>
+          <li class="navItems">
+            <a class="navTexts" href="#contactContainer" id="showContact"
+              >Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <p class="dateDisplay"></p>
+    </header>
+
+    <div class="diplay-wrap">
+      <!-- BOOK DISPLAY -->
+      <section class="bookContainer wrapper">
+        <h2 class="add-book-head-tag">All Awesome Books</h2>
+        <div class="booksDisplay"></div>
+        <hr />
+      </section>
+
+      <section class="formContainer wrapper">
+        <h2 class="add-book-head-tag">Add a new book</h2>
+        <form action="" method="">
+          <input
+            type="text"
+            name="Title"
+            id="Title"
+            placeholder="Title"
+            value=""
+            class="formFields"
+          />
+          <input
+            type="text"
+            name="Author"
+            id="Author"
+            placeholder="Author"
+            value=""
+            class="formFields"
+          />
+          <button class="formFields" type="submit">Add</button>
+        </form>
+      </section>
+
+      <section class="contactContainer wrapper">
+        <h2 class="add-book-head-tag">Contact Information</h2>
+        <p>Do you have any questions or you just want to say "Hello"?</p>
+        <p>You can reach out to us!</p>
+        <ul>
+          <li>Our Email: mail@mail.com</li>
+          <li>Our Phone number: 04778998321</li>
+          <li>Our Address: Streetname 22, 09667 City, Country</li>
+        </ul>
+      </section>
+    </div>
+    <footer class="navSection">
+      <p class="navTexts">© AwesomeBooks 2023 - 2024 | All Rights Reserved</p>
+    </footer>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
