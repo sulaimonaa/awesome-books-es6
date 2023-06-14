@@ -20,6 +20,7 @@ export default class Bookstore {
       this.bookLibrary = JSON.parse(store);
     }
   }
+
   // remove book
   removeBook(index) {
     this.bookLibrary = this.bookLibrary.filter(
@@ -52,15 +53,6 @@ export default class Bookstore {
     });
   }
 
-  // remove book
-  removeBook(index) {
-    this.bookLibrary = this.bookLibrary.filter(
-      (book, bookIndex) => bookIndex !== index
-    );
-    localStorage.setItem('books', JSON.stringify(this.bookLibrary));
-
-    this.createLibrary();
-  }
   // take in and stores new book in local storage
   addBook(e) {
     e.preventDefault();
