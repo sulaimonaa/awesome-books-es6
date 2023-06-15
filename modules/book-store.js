@@ -22,7 +22,7 @@ export default class Bookstore {
   // remove book
   removeBook(index) {
     this.bookLibrary = this.bookLibrary.filter(
-      (book, bookIndex) => bookIndex !== index
+      (book, bookIndex) => bookIndex !== index,
     );
     localStorage.setItem('books', JSON.stringify(this.bookLibrary));
 
@@ -47,7 +47,6 @@ export default class Bookstore {
         </div>
         `;
 
-      const removeBtnDiv = document.getElementById('removeBtn');
       const removeButton = document.createElement('button');
       removeButton.textContent = 'Remove';
 
