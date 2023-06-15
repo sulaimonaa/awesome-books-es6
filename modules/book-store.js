@@ -22,7 +22,7 @@ export default class Bookstore {
   // remove book
   removeBook(index) {
     this.bookLibrary = this.bookLibrary.filter(
-      (book, bookIndex) => bookIndex !== index,
+      (book, bookIndex) => bookIndex !== index
     );
     localStorage.setItem('books', JSON.stringify(this.bookLibrary));
 
@@ -41,12 +41,22 @@ export default class Bookstore {
                 <p>${book.titleBook}</p>
                 <p> ${book.authorBook}</p>
             </div>
-            <div class='removeBtn'>
-              <button onclick="removeBook(${index})" class='delete'>Remove</button>
+            <div class='removeBtn' id='removeBtn'>
             </div>
           </div>
         </div>
         `;
+
+      const removeBtnDiv = document.getElementById('removeBtn');
+      const removeButton = document.createElement('button');
+      removeButton.textContent = 'Remove';
+
+      removeButton.addEventListener('click', () => {
+        this.removeBook(index);
+      });
+
+      removeButton.classList.add('delete');
+      bookContainer.appendChild(removeButton);
       this.BooksContainer.appendChild(bookContainer);
     });
   }
